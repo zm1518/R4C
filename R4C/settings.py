@@ -121,3 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.freesmtpservers.com'  # Замените на хост вашего почтового провайдера
+EMAIL_PORT = 25  # Замените на порт вашего почтового провайдера
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
