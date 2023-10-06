@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from robots.views import CreateRobotView
+from robots.utils import download_robot_report
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('robots/', CreateRobotView.as_view(), name='create_robot')
+    path('robots/', CreateRobotView.as_view(), name='create_robot'),
+    path('download-robot-report/', download_robot_report, name='download-robot-report/')
 ]
